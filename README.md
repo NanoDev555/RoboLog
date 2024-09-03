@@ -1,2 +1,2 @@
 Lean Canvas
-https://leanstack.com/ci/rlmastery/cohorts/foundations/canvases/827860
+https://leanstack.com/ci/rlmastery/cohorts/foundations/canvases/827974
