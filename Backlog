@@ -1,0 +1,42 @@
+Backlog projektkurs
+
+Project Backlog: Gesture-to-Speech Glove
+User Story 1: As a mute individual, I want to wear a glove that can detect my hand gestures so that I can communicate with others using sign language.
+Tasks:
+-	Select and source the most suitable flex sensors for accurately detecting finger movements.
+-	Design the glove, ensuring that the sensors are correctly positioned on the fingers to capture gestures effectively.
+-	Create a prototype of the glove, integrating the sensors and ensuring comfort and usability.
+-	Test the prototype for functionality and comfort to ensure it accurately detects hand gestures.
+User Story 2: As a user of the glove, I want the glove to interpret my hand gestures into letters and symbols in real-time so that I can communicate efficiently.
+Tasks:
+-	Write the Arduino code to read the data from the flex sensors on the glove.
+-	Implement a gesture recognition system in the Arduino that translates finger positions into corresponding letters or symbols.
+-	Test the gesture recognition with various hand movements to ensure accuracy and responsiveness.
+-	Optimize the Arduino code to process gestures in real-time without delays.
+User Story 3: As a user, I want to see the interpreted gestures displayed as text on an LCD screen or in a mobile app so that I can confirm what I’m communicating.
+Tasks:
+-	Develop the functionality to display the recognized gestures as text on an LCD screen attached to the glove.
+-	Alternatively, develop the user interface (UI) and user experience (UX) for a mobile application that displays the text.
+-	Ensure that both the LCD display and the mobile app can accurately and quickly show the recognized text.
+-	Test the display and app with the glove to ensure the output is correct and easy to read.
+User Story 4: As a user, I want the option for the system to speak the recognized gestures aloud so that others can easily understand what I’m communicating.
+Tasks:
+-	Integrate a text-to-speech function in both the LCD system (if feasible) and the mobile app.
+-	Research and select a suitable text-to-speech API or module that can work with the chosen platform.
+-	Implement the speaking function, ensuring that the pronunciation is clear and understandable.
+-	Test the speech output under different conditions to ensure clarity and accuracy.
+User Story 5: As a user, I want to calibrate the glove to my specific hand size and movement range so that the gesture detection is accurate for me.
+Tasks:
+-	Develop a calibration system that adjusts sensor sensitivity based on the user’s hand size and movement.
+-	Create a user-friendly interface for calibration, either on the LCD display or within the mobile app.
+-	Test the calibration feature with different users to ensure it meets a variety of needs.
+-	Adjust and improve the calibration process based on user feedback.
+User Story 6: As a user, I need the Bluetooth connection between the glove and the mobile app to be stable, or ensure a reliable connection to the LCD display, so that my communication is not interrupted.
+Tasks:
+-	Investigate and troubleshoot any potential issues with the Bluetooth connection between the glove and the app, or between the glove and the LCD display (if applicable).
+-	Optimize the communication to ensure a stable and reliable connection.
+-	Test the connection under various conditions to ensure it remains stable during use.
+-	Implement fixes or enhancements to maintain connection stability.
+
+
+
