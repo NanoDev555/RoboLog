@@ -1,4 +1,4 @@
-# Projektets Namn
+# RoboLog
 
 ## Introduktion
 En kort beskrivning av vad projektet gör och varför det är användbart.
