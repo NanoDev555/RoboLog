@@ -44,7 +44,7 @@ Before running the RoboLog project, you need the following:
 After installing all the necessary programs and packages, you need to connect the laptop to the robot. There are two ways to do this, and here are the step-by-step instructions for each method:
 
 - Method one:
-- 
+
 Use the hotspot in the Niryo One software app and connect to it using Wi-Fi. Note that by using this method, your laptop will lose internet connection.
 
 - Method two (recommended):
