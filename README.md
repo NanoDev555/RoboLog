@@ -32,14 +32,27 @@ Before running the RoboLog project, you need the following:
 
 ## Installations
 ------------------
-1. Download the Niryo One sofware application from the link down below.
+1. Download the Niryo One software application from the link down below.
 2. Download and install the Arduino IDE from [Arduino's official website](https://www.arduino.cc/en/software) .
 3. Install the necessary libraries, such as the Arduino_LSM9DS1 library for the IMU, through the Arduino IDE Library Manager.
-4. Download and install the Ubuntu 20.04 official website.
+4. Download the Ubuntu 20.04 from Microsoft store.
 5. Install packages in Ubuntu by following the steps here [ROSInstallation](ROSInstallation)
 
 
-## Användning
+## Getting the Niryo One started
+--------------------------------------
+After installing all the necessary programs and packages, you need to connect the laptop to the robot. There are two ways to do this, and here are the step-by-step instructions for each method:
+
+- Method one:
+Use the hotspot in the Niryo One software app and connect to it using Wi-Fi. Note that by using this method, your laptop will lose internet connection.
+
+- Method two (recommended):
+Use an Ethernet cable. In this case, you need to select the IP address you want to connect to in the Niryo One software app. The IP address you need to use is "169.254.200.200". By using this method, you will still have an internet connection on your laptop.
+
+
+
+
+
 Instruktioner om hur man använder projektet efter installation.
 
 ## Bidra
