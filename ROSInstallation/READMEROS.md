@@ -57,7 +57,7 @@ You need to source the ROS environment setup script in every terminal where you 
 echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 
--For zsh users, replace the above with:
+- For zsh users, replace the above with:
 
 echo "source /opt/ros/noetic/setup.zsh" >> ~/.zshrc
 source ~/.zshrc
