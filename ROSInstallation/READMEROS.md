@@ -34,19 +34,19 @@ sudo apt update
 4. Install ROS Noetic:
 There are multiple versions of ROS you can install, based on what you need:
 
--Desktop-Full Install (recommended): This includes everything, including simulators and perception packages.
+- Desktop-Full Install (recommended): This includes everything, including simulators and perception packages.
 
 sudo apt install ros-noetic-desktop-full
 
--Desktop Install: Includes core ROS packages and visualization tools like rviz.
+- Desktop Install: Includes core ROS packages and visualization tools like rviz.
 
 sudo apt install ros-noetic-desktop
 
--ROS-Base (Bare Bones): Includes only the core ROS packages, with no GUI tools.
+- ROS-Base (Bare Bones): Includes only the core ROS packages, with no GUI tools.
 
 sudo apt install ros-noetic-ros-base
 
--To find specific ROS packages:
+- To find specific ROS packages:
 
 apt search ros-noetic
 
@@ -68,10 +68,10 @@ If you plan to create your own ROS packages, install these additional dependenci
 
 sudo apt install python3-rosdep python3-rosinstall python3-rosinstall-generator python3-wstool build-essential
 
--Initialize rosdep:
+- Initialize rosdep:
 
 sudo rosdep init
 rosdep update
 
--After you follow the steps above, you will have accsess to the Niryo One Rasberry pi board and then you can add your python files and run it to control the robot.
+- After you follow the steps above, you will have accsess to the Niryo One Rasberry pi board and then you can add your python files and run it to control the robot.
 
