@@ -2,7 +2,7 @@
 
 This guide walks you through the installation of ROS Noetic on Ubuntu for the RoboLog project. ROS Noetic provides the necessary tools for robotic control and is compatible with Ubuntu 20.04. We recommend following the steps below to install the full ROS Desktop environment, but you can choose other options based on your needs.
 
--Before installing ROS, you need to enable certain Ubuntu repositories:
+- Before installing ROS, you need to enable certain Ubuntu repositories:
 
 Open a terminal and configure your Ubuntu repositories to allow "restricted," "universe," and "multiverse."
 
