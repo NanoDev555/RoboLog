@@ -1,4 +1,5 @@
-##Introduction
+# Introduction
+
 This guide walks you through the installation of ROS Noetic on Ubuntu for the RoboLog project. ROS Noetic provides the necessary tools for robotic control and is compatible with Ubuntu 20.04. We recommend following the steps below to install the full ROS Desktop environment, but you can choose other options based on your needs.
 
 -Before installing ROS, you need to enable certain Ubuntu repositories:
@@ -9,9 +10,9 @@ Open a terminal and configure your Ubuntu repositories to allow "restricted," "u
 sudo add-apt-repository universe
 sudo add-apt-repository multiverse
 sudo add-apt-repository restricted
---------------------------------
 
-##Step-by-Step Installation
+
+## Step-by-Step Installation
 
 1. Add the ROS Noetic package sources:
 Configure your system to accept software from the ROS package repository:
@@ -71,6 +72,6 @@ sudo apt install python3-rosdep python3-rosinstall python3-rosinstall-generator 
 
 sudo rosdep init
 rosdep update
-------------------------------------------------------------
-After you follow the steps above, you will have accsess to the Niryo One Rasberry pi board and then you can add your python files and run it to control the robot.
+
+-After you follow the steps above, you will have accsess to the Niryo One Rasberry pi board and then you can add your python files and run it to control the robot.
 
