@@ -34,7 +34,7 @@ Before running the RoboLog project, you need the following:
 2. Install the necessary libraries, such as the Arduino_LSM9DS1 library for the IMU, through the Arduino IDE Library Manager.
 3. Connect your Arduino Nano 33 BLE Sense to your computer via USB.
 4- Download and install the Ubuntu 20.04 official website.
-5- Install packages in Ubuntu by following the steps here [Link Text](ROSInstallation)
+5- Install packages in Ubuntu by following the steps here [ROSInstallation](ROSInstallation)
 
 
 ## Användning
