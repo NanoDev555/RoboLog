@@ -1,11 +1,13 @@
 # RoboLog
 
 ## Introduktion
+-------------------
 RoboLog is a project focused on creating a prosthetic arm controlled by sensor inputs like a potentiometer, IMU (Inertial Measurement Unit), and a flex sensor. The project integrates sensor data to precisely control the movements of a prosthetic arm's joints and its gripping function. This solution is designed to provide users with smooth and responsive control over the arm, mimicking natural movements.
 
 This project is particularly useful for developers and researchers working on prosthetic technology, assistive devices, and rehabilitation systems that require precise and adaptive control mechanisms for human limb replacements.
 
 ## Prerequisites
+------------------
 Before running the RoboLog project, you need the following:
 
 - Niryo One Robot and its software (The link for the software file is down below)
@@ -28,8 +30,8 @@ Before running the RoboLog project, you need the following:
 
 - Serial communication: Between Arduino and Python for real-time control.
 
-- 
 ## Installation
+------------------
 1. Download and install the Arduino IDE from Arduino's official website.
 2. Install the necessary libraries, such as the Arduino_LSM9DS1 library for the IMU, through the Arduino IDE Library Manager.
 3. Connect your Arduino Nano 33 BLE Sense to your computer via USB.
