@@ -30,11 +30,11 @@ Before running the RoboLog project, you need the following:
 
 - Serial communication: Between Arduino and Python for real-time control.
 
-## Installation
+## Installations
 ------------------
-1. Download and install the Arduino IDE from Arduino's official website.
-2. Install the necessary libraries, such as the Arduino_LSM9DS1 library for the IMU, through the Arduino IDE Library Manager.
-3. Connect your Arduino Nano 33 BLE Sense to your computer via USB.
+1.Download the Niryo One sofware application from the link down below.
+2. Download and install the Arduino IDE from Arduino's official website.
+3.. Install the necessary libraries, such as the Arduino_LSM9DS1 library for the IMU, through the Arduino IDE Library Manager.
 4. Download and install the Ubuntu 20.04 official website.
 5. Install packages in Ubuntu by following the steps here [ROSInstallation](ROSInstallation)
 
@@ -50,8 +50,8 @@ Information om licensen för projektet.
 
 
 
-Mjukvaran för Niryo One robot arm
+-  Niryo Ones software application:
 https://drive.google.com/drive/folders/1isq_ZBcwJi3rM7CoAoUcWk0g0jUqNlkB?usp=drive_link
 
-Lean Canvas
+- Lean Canvas
 https://leanstack.com/ci/rlmastery/cohorts/foundations/canvases/827974
