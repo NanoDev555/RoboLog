@@ -33,7 +33,7 @@ Before running the RoboLog project, you need the following:
 ## Installations
 ------------------
 1. Download the Niryo One sofware application from the link down below.
-2. Download and install the Arduino IDE from Arduino's official website.
+2. Download and install the Arduino IDE from [Arduino's official website](https://www.arduino.cc/en/software) .
 3. Install the necessary libraries, such as the Arduino_LSM9DS1 library for the IMU, through the Arduino IDE Library Manager.
 4. Download and install the Ubuntu 20.04 official website.
 5. Install packages in Ubuntu by following the steps here [ROSInstallation](ROSInstallation)
