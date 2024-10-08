@@ -6,11 +6,11 @@ This guide walks you through the installation of ROS Noetic on Ubuntu for the Ro
 
 Open a terminal and configure your Ubuntu repositories to allow "restricted," "universe," and "multiverse."
 
-
-***sudo add-apt-repository universe***
-***sudo add-apt-repository multiverse***
-***sudo add-apt-repository restricted***
-
+```
+sudo add-apt-repository universe
+sudo add-apt-repository multiverse
+sudo add-apt-repository restricted
+```
 
 ## Step-by-Step Installation
 
