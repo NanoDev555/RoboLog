@@ -1,1 +1,1 @@
-![Robot Arm](Downloads/pic1.HEIC)
+![Robot Arm](Downloads/pic1.png)
