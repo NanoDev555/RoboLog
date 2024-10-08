@@ -59,8 +59,10 @@ First of all, start Ubuntu and then type in these commands to access the files i
 ***ssh niryo@169.254.200.200***
 
 2. Ubunto will ask you to type in a password to access the robot, the password is: ***robotics***
-3. By typing the command ***"nano"*** then ***ctrl + R*** then ***ctrl + T*** you will access the files and there you will be able to add your Python codes.
-4. By typing the command ***"nano YOURFILENAME"*** you will go to the requested file without going to the  files menu. 
+3. Type in the command *** source ~/.bashrc*** to be able then to add, edit and run your codes.
+4. By typing the command ***"nano"*** then ***ctrl + R*** and then ***ctrl + T***, you will access the files and there you will be able to add your Python codes.
+5. By typing the command ***"nano YOUR.FILE.NAME"*** You will go to the requested file without going to the files menu.
+6. 
 
 
 ## Bidra
