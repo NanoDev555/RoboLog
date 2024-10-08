@@ -64,7 +64,7 @@ First of all, start Ubuntu and then type in these commands to access the files i
 5. By typing the command ***"nano YOUR.FILE.NAME.PY"*** You will go to the requested file without going to the files menu.
 6. To run a code you use the command ***python YOUR.FILE.NAME.PY***.
 
--Now after you run the code you will be able to control the robot according to you code. 
+- After you run the code, you will be able to control the robot according to your code. 
 
 
 ## Bidra
