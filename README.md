@@ -54,12 +54,12 @@ Use an Ethernet cable. In this case, you need to select the IP address you want 
 Now, after you are connected to the robot, you have to start the Ubuntu 20.4 application. There are some commands you need to use to run or save codes on the Rasberry PI board.
 
 First of all, start Ubuntu and then type in these commands to access the files in the Rasberry PI board and edit or add codes to it:
-1.  to connect to the robot type in this command:
+1.  To connect to the robot type in this command:
 
 ***ssh niryo@169.254.200.200***
 
-2. Ubunto will ask you to type in a password to access the robot, the password is: robotics
-3. by typing the command ***"nano"***  you will access the files and there you will be able to add your Python codes.
+2. Ubunto will ask you to type in a password to access the robot, the password is: ***robotics***
+3. By typing the command ***"nano"***  you will access the files and there you will be able to add your Python codes.
 4. By typing the command ***"nano YOURFILENAME"*** you will go to the requested file without going to the  files menu. 
 
 
