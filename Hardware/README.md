@@ -10,16 +10,14 @@ This document provides detailed information about the hardware components used i
 2. [Hardware Components](#hardware-components)
    - [Niryo One Robot](#niryo-one-robot)
    - [Arduino Nano 33 BLE](#arduino-nano-33-ble)
-   - [Sensors](#sensors)
-     - [Potentiometer](#potentiometer)
+   - [Potentiometer](#potentiometer)
+   - [Sensor](#sensor)
      - [Flex Sensor](#flex-sensor)
    - [Connections and Wiring](#connections-and-wiring)
    - [Power Supply](#power-supply)
-3. [Setup and Assembly](#setup-and-assembly)
-4. [Troubleshooting](#troubleshooting)
-5. [Maintenance](#maintenance)
-6. [Future Improvements](#future-improvements)
-7. [References](#references)
+3. [Maintenance](#maintenance)
+4. [Future Improvements](#future-improvements)
+5. [References](#references)
 
 ## Overview
 
@@ -123,3 +121,54 @@ A flex sensor changes its resistance based on the amount it is bent.
 - Ensure all devices are powered according to their specifications.
 - Avoid short circuits by double-checking connections.
 - Disconnect power before making changes to the wiring.
+
+## Maintenance
+
+- **Regularly Inspect Connections**
+
+  - Ensure all wires and connections are secure.
+  - Look for signs of wear or damage on sensors and cables.
+
+- **Update Software**
+
+  - Keep the Arduino firmware and control software up to date.
+  - Update the Niryo One firmware as per the manufacturer's recommendations.
+ 
+## Future Improvements
+
+- **Additional Sensors**
+
+  - Integrate more advanced sensors like EMG (Electromyography) for muscle activity detection.
+
+- **Wireless Communication**
+
+  - Implement Bluetooth or Wi-Fi communication to eliminate USB cables.
+
+- **Enhanced Control Algorithms**
+
+  - Develop machine learning models for more intuitive control.
+
+- **User Interface**
+
+  - Create a graphical user interface (GUI) for easier interaction and monitoring.
+
+## References
+
+- **Niryo One's Software Application**
+
+  - [Download Link](https://drive.google.com/drive/folders/1isq_ZBcwJi3rM7CoAoUcWk0g0jUqNlkB?usp=drive_link)
+
+- **Lean Canvas**
+
+  - [Lean Canvas Link](https://leanstack.com/ci/rlmastery/cohorts/foundations/canvases/827974)
+
+- **Arduino Nano 33 BLE**
+
+  - [Arduino Official Page](https://store.arduino.cc/arduino-nano-33-ble)
+
+- **Sensor Datasheets**
+
+  - **Flex Sensor**: [Manufacturer Info](https://www.sparkfun.com/datasheets/Sensors/Flex/flex22.pdf)
+  - **Potentiometer**: Refer to the specific model used.
+
+
