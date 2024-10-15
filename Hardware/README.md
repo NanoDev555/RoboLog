@@ -169,6 +169,6 @@ A flex sensor changes its resistance based on the amount it is bent.
 - **Sensor Datasheets**
 
   - **Flex Sensor**: [Manufacturer Info](https://www.sparkfun.com/datasheets/Sensors/Flex/flex22.pdf)
-  - **Potentiometer**: Refer to the specific model used.
+  - **Potentiometer**: Provided by KTH.
 
 
