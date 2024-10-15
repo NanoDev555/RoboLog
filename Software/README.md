@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This document provides detailed information about the software components of the RoboLog project. It is intended for future developers who will take over the project next year, helping them understand the software architecture, codebase, and how it interfaces with the hardware components.
+This document provides detailed information about the **software components** of the RoboLog project. It is intended for future developers who will take over the project next year, helping them understand the software architecture, codebase, and how it interfaces with the hardware components.
 
 ## Table of Contents
 
@@ -33,7 +33,7 @@ This document provides detailed information about the software components of the
 
 ## Project Overview
 
-The RoboLog project aims to develop a prosthetic arm controlled through sensor inputs to mimic natural human movements. The software components are responsible for reading sensor data, processing inputs, and commanding the Niryo One robotic arm accordingly.
+The RoboLog project aims to develop a prosthetic arm controlled through sensor inputs to mimic natural human movements. The **software components** are responsible for reading sensor data, processing inputs, and commanding the Niryo One robotic arm accordingly.
 
 ## Software Architecture
 
@@ -50,26 +50,7 @@ The RoboLog project aims to develop a prosthetic arm controlled through sensor i
 3. **Data Processing**: Python scripts read and process the sensor data.
 4. **Robot Control**: Processed data is used to generate movement commands for the Niryo One robot.
 
-## Setup and Installation
+#### Example Data Flow Diagram (Pseudo-code):
 
-### Prerequisites
-
-- **Hardware**:
-  - Arduino Nano 33 BLE
-  - Niryo One Robot
-- **Software**:
-  - Arduino IDE
-  - Python 3.x
-  - Niryo One Python API
-  - Ubuntu 20.04 (recommended)
-- **Libraries**:
-  - `Arduino_LSM9DS1` for IMU
-  - `pySerial` for serial communication
-
-### Installation Steps
-
-1. **Clone the Repository**
-
-   ```bash
-   git clone https://github.com/yourusername/robolog.git
-
+```plaintext
+[Arduino Sensors] --(Serial Data)--> [Python Script] --(API Commands)--> [Niryo One Robot]
