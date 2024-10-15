@@ -1,1 +1,1 @@
-![Robot Arm](Downloads/pic1.png)
+![Robot Arm](Desktop/pic1.jpg)
