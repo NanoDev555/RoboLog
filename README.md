@@ -6,7 +6,7 @@
 1. [Introduktion](#Introduktion)
 2. [Prerequisites](#prerequisites)
 3. [Installation](#installation)
-4. [Getting the Niryo One started](#Getting_the_Niryo_One_started)
+4. [Getting the Niryo One started](#Getting-the-Niryo-One-started)
 5. [Contributing](#contributing)
 6. [License](#license)
 7. [References](#references)
