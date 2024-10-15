@@ -1,5 +1,16 @@
 # RoboLog
 
+
+## Table of Contents
+
+1. [Introduktion](#Introduktion)
+2. [Prerequisites](#prerequisites)
+3. [Installation](#installation)
+4. [Getting Started with the Niryo One](#getting-started-with-the-niryo-one)
+5. [Contributing](#contributing)
+6. [License](#license)
+7. [References](#references)
+
 ## Introduktion
 -------------------
 RoboLog is a project focused on creating a prosthetic arm controlled by sensor inputs like a potentiometer, IMU (Inertial Measurement Unit), and a flex sensor. The project integrates sensor data to precisely control the movements of a prosthetic arm's joints and its gripping function. This solution is designed to provide users with smooth and responsive control over the arm, mimicking natural movements.
