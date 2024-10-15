@@ -31,13 +31,15 @@ The RoboLog project aims to develop a prosthetic arm controlled through various 
 
 #### Description
 
-The **Niryo One** is a 6-axis collaborative robotic arm designed for education and research. It is powered by ROS (Robot Operating System) and allows for advanced programming and control.
+The **Niryo One** is a 6-axis collaborative robotic arm. It is powered by ROS (Robot Operating System) and allows for advanced programming and control.
 
 #### Specifications
 
 - **Degrees of Freedom**: 6
 - **Payload**: Up to 0.5 kg
 - **Reach**: 440 mm
+- **Weight**: 3kg
+- **Repeatabillity**: 3kg
 - **Software Compatibility**: ROS, Python APIs
 - **End Effectors**: Gripper, vacuum pump, electromagnet (the gripper is used in this project)
 
@@ -64,7 +66,6 @@ The **Arduino Nano 33 BLE** is a compact microcontroller board featuring Bluetoo
 
 The Arduino Nano 33 BLE collects data from its built-in IMU and connected external sensors (potentiometer and flex sensor), sending this data to the control software running on a computer, which then commands the Niryo One robot.
 
-### Sensors
 
 #### Potentiometer
 
@@ -76,6 +77,8 @@ A potentiometer is a three-terminal resistor with a sliding contact that forms a
 
 - **Manual Control**: Allows the user to adjust the position of a specific joint on the robot manually.
 - **Data Output**: Provides variable resistance translated into position values for the robot's joint.
+
+### Sensor
 
 #### Flex Sensor
 
@@ -105,4 +108,18 @@ A flex sensor changes its resistance based on the amount it is bent.
     - **Signal**: Connect to an analog input pin (e.g., A0)
   - **Flex Sensor**:
     - **One End**: Connect to 3.3V through a pull-up resistor (e.g., 10kΩ)
-    - **Other End**: Connect to Grou
+    - **Other End**: Connect to GND
+
+
+## Power Supply
+
+### Requirements
+
+- **Arduino Nano 33 BLE**: Powered via USB (5V from the computer).
+- **Niryo One Robot**: Requires its own power supply (24V DC, provided with the robot).
+
+### Safety Considerations
+
+- Ensure all devices are powered according to their specifications.
+- Avoid short circuits by double-checking connections.
+- Disconnect power before making changes to the wiring.
