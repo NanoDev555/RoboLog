@@ -6,7 +6,7 @@
 1. [Introduktion](#Introduktion)
 2. [Prerequisites](#prerequisites)
 3. [Installation](#installation)
-4. [Getting Started with the Niryo One](#getting-started-with-the-niryo-one)
+4. [Getting the Niryo One started](#Getting_the_Niryo_One_started)
 5. [Contributing](#contributing)
 6. [License](#license)
 7. [References](#references)
@@ -79,7 +79,7 @@ ssh niryo@169.254.200.200
 - After you run the code, you will be able to control the robot according to your code. 
 
 
-## Bidra
+## Contributing
 Information om hur andra kan bidra till projektet.
 
 ## Licens
