@@ -80,7 +80,15 @@ ssh niryo@169.254.200.200
 
 
 ## Contributing
-Information om hur andra kan bidra till projektet.
+We welcome contributions from anyone interested in improving the **RoboLog** project. If you'd like to contribute, please follow these steps:
+
+1. **Fork** this repository by clicking the **Fork** button at the top of the GitHub page.
+
+2. **Clone** your forked repository to your local machine:
+
+   ```bash
+   git clone https://github.com/your-username/robolog.git
+
 
 ## Licens
 Information om licensen för projektet.
