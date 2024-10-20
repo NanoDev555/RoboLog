@@ -1,119 +1,107 @@
-#include <Arduino_LSM9DS1.h>  // Include the library for the IMU
+#include <Arduino_LSM9DS1.h>
 
-const int numReadings = 10;  // Number of samples to average
-float xReadings[numReadings];  // Array to store X readings
-float yReadings[numReadings];  // Array to store Y readings
-float totalX = 0, totalY = 0;  // Totals for X and Y readings
-float averageX = 0, averageY = 0;  // Averages for X and Y
-float lastAverageX = 0, lastAverageY = 0;  // Previous averages
-int readIndex = 0;  // Index for reading array
-int numSamplesCollected = 0;  // Counter for collected samples
-int potPin3 = A0;  // Pin for potentiometer controlling Joint 3
-int buttonGripperPin = 2;  // Button pin for gripper control
-bool gripperState = LOW;  // Gripper state, LOW for closed, HIGH for open
-bool lastButtonState = HIGH;  // Stores the previous state of the button
-bool buttonPressed = false;  // Flag to detect when the button is pressed
-int lastPotValue3 = 0;  // Store last potentiometer value for Joint 3
-unsigned long lastDebounceTime = 0;  // Last time the output pin was toggled
-unsigned long debounceDelay = 70;  // The debounce time; increase if the output flickers
-int inputThreshold = 50;  // Threshold for filtering input (for potentiometer)
-float imuThreshold = 0.1;  // Threshold for IMU filtering
+const int antalAvläsningar = 10;  
+float xAvläsningar[antalAvläsningar];  
+float yAvläsningar[antalAvläsningar];  
+float totalX = 0, totalY = 0;  
+float medelX = 0, medelY = 0;  
+float senasteMedelX = 0, senasteMedelY = 0;  
+int läsIndex = 0;  
+int antalInsamladeProv = 0;  
+int potPin3 = A0;  
+int knappGripPin = 2;  
+bool gripTillstånd = LOW;  
+bool senasteKnappTillstånd = HIGH;  
+bool knappTryckt = false;  
+int senastePotVärde3 = 0;  
+unsigned long senasteDebounceTid = 0;  
+unsigned long debounceFördröjning = 70;  
+int ingångströskel = 50;  
+float imuTröskel = 0.1;  
 
-// Timing variables for non-blocking delay
-unsigned long previousMillis = 0;
-const long interval = 150;  // 50ms delay for sampling
+unsigned long föregåendeMillis = 0;
+const long intervall = 150;  
 
 void setup() {
   Serial.begin(115200);
-  for (int i = 0; i < numReadings; i++) {
-    xReadings[i] = 0;
-    yReadings[i] = 0;
+  for (int i = 0; i < antalAvläsningar; i++) {
+    xAvläsningar[i] = 0;
+    yAvläsningar[i] = 0;
   }
   pinMode(potPin3, INPUT);
-  pinMode(buttonGripperPin, INPUT_PULLUP);  // Use internal pull-up resistor
+  pinMode(knappGripPin, INPUT_PULLUP);  
 
   if (!IMU.begin()) {
-    Serial.println("Failed to initialize IMU!");
+    Serial.println("Misslyckades med att initiera IMU!");
     while (1);
   } else {
-    Serial.println("IMU initialized successfully.");
+    Serial.println("IMU initierad framgångsrikt.");
   }
 }
 
 void loop() {
-  unsigned long currentMillis = millis();
+  unsigned long nuvarandeMillis = millis();
 
-  // Handle IMU and potentiometer updates
-  if (currentMillis - previousMillis >= interval) {
-    previousMillis = currentMillis;
+  if (nuvarandeMillis - föregåendeMillis >= intervall) {
+    föregåendeMillis = nuvarandeMillis;
     float x, y, z;
 
-    // IMU data and potentiometer reading
     if (IMU.accelerationAvailable()) {
       IMU.readAcceleration(x, y, z);
-      totalX -= xReadings[readIndex];
-      totalY -= yReadings[readIndex];
-      xReadings[readIndex] = x;
-      yReadings[readIndex] = y;
-      totalX += xReadings[readIndex];
-      totalY += yReadings[readIndex];
-      readIndex = (readIndex + 1) % numReadings;
-      numSamplesCollected++;
+      totalX -= xAvläsningar[läsIndex];
+      totalY -= yAvläsningar[läsIndex];
+      xAvläsningar[läsIndex] = x;
+      yAvläsningar[läsIndex] = y;
+      totalX += xAvläsningar[läsIndex];
+      totalY += yAvläsningar[läsIndex];
+      läsIndex = (läsIndex + 1) % antalAvläsningar;
+      antalInsamladeProv++;
 
-      if (numSamplesCollected >= numReadings) {
-        averageX = totalX / numReadings;
-        averageY = totalY / numReadings;
-        int potValue3 = analogRead(potPin3);
+      if (antalInsamladeProv >= antalAvläsningar) {
+        medelX = totalX / antalAvläsningar;
+        medelY = totalY / antalAvläsningar;
+        int potVärde3 = analogRead(potPin3);
 
-        // Apply filtering
-        bool imuChanged = (abs(averageX - lastAverageX) > imuThreshold || abs(averageY - lastAverageY) > imuThreshold);
-        bool potChanged = (abs(potValue3 - lastPotValue3) > inputThreshold);
+        bool imuÄndrad = (abs(medelX - senasteMedelX) > imuTröskel || abs(medelY - senasteMedelY) > imuTröskel);
+        bool potÄndrad = (abs(potVärde3 - senastePotVärde3) > ingångströskel);
 
-        // Only print if IMU or potentiometer values change
-        if (imuChanged || potChanged) {
-          printData(averageY, averageX, potValue3, gripperState);
-          lastAverageX = averageX;
-          lastAverageY = averageY;
-          lastPotValue3 = potValue3;
+        if (imuÄndrad || potÄndrad) {
+          skrivData(medelY, medelX, potVärde3, gripTillstånd);
+          senasteMedelX = medelX;
+          senasteMedelY = medelY;
+          senastePotVärde3 = potVärde3;
         }
 
-        numSamplesCollected = 0;
+        antalInsamladeProv = 0;
       }
     }
   }
 
-  // Gripper button handling, independent of IMU and potentiometer
-  int buttonReading = digitalRead(buttonGripperPin);
+  int knappAvläsning = digitalRead(knappGripPin);
 
-  // Check if the button state has changed (debounced)
-  if (buttonReading != lastButtonState) {
-    if ((millis() - lastDebounceTime) > debounceDelay) {
-      lastDebounceTime = millis();
+  if (knappAvläsning != senasteKnappTillstånd) {
+    if ((millis() - senasteDebounceTid) > debounceFördröjning) {
+      senasteDebounceTid = millis();
 
-      if (buttonReading == LOW && !buttonPressed) {
-        // Button is pressed, but wasn't pressed before
-        buttonPressed = true;
-        gripperState = !gripperState;  // Toggle gripper state
-        
-        // Print the updated gripper state immediately
-        printData(averageY, averageX, lastPotValue3, gripperState);  // Use the most recent IMU and potentiometer values
-      } else if (buttonReading == HIGH) {
-        // Button is released, reset the pressed flag
-        buttonPressed = false;
+      if (knappAvläsning == LOW && !knappTryckt) {
+        knappTryckt = true;
+        gripTillstånd = !gripTillstånd;  
+        skrivData(medelY, medelX, senastePotVärde3, gripTillstånd);  
+      } else if (knappAvläsning == HIGH) {
+        knappTryckt = false;
       }
     }
   }
 
-  lastButtonState = buttonReading;  // Update last button state
+  senasteKnappTillstånd = knappAvläsning;  
 }
 
-// Function to print the IMU, potentiometer, and gripper state data
-void printData(float avgY, float avgX, int potVal, bool gripState) {
-  Serial.print(avgY);  // Y-axis for Joint 1
+void skrivData(float medelY, float medelX, int potVärde, bool gripTillstånd) {
+  Serial.print(medelY);  
   Serial.print(',');
-  Serial.print(avgX);  // X-axis for Joint 2
+  Serial.print(medelX);  
   Serial.print(',');
-  Serial.print(potVal);  // Potentiometer for Joint 3
+  Serial.print(potVärde);  
   Serial.print(',');
-  Serial.println(gripState);  // Include gripper state in the same line
+  Serial.println(gripTillstånd);  
 }
