@@ -16,8 +16,9 @@ This document provides detailed information about the hardware components used i
    - [Connections and Wiring](#connections-and-wiring)
    - [Power Supply](#power-supply)
 3. [Maintenance](#maintenance)
-4. [Future Improvements](#future-improvements)
-5. [References](#references)
+4. [Images](#Images)
+5. [Future Improvements](#future-improvements)
+6. [References](#references)
 
 ## Overview
 
@@ -133,6 +134,10 @@ A flex sensor changes its resistance based on the amount it is bent.
 
   - Keep the Arduino firmware and control software up to date.
   - Update the Niryo One firmware as per the manufacturer's recommendations.
+ 
+## Images
+![WhatsApp Image 2024-10-20 at 19 15 29_97d9d472](https://github.com/user-attachments/assets/54e9ae37-9c08-4281-9ff6-bf2c928101f2)
+
  
 ## Future Improvements
 
