@@ -136,7 +136,9 @@ A flex sensor changes its resistance based on the amount it is bent.
   - Update the Niryo One firmware as per the manufacturer's recommendations.
  
 ## Images
-![Glove](https://github.com/user-attachments/assets/54e9ae37-9c08-4281-9ff6-bf2c928101f2){:width="800px"}
+<img src="https://github.com/user-attachments/assets/54e9ae37-9c08-4281-9ff6-bf2c928101f2" alt="Beskrivning av bilden" width="800" height="600"/>
+
+
 
  
 ## Future Improvements
