@@ -22,6 +22,9 @@ This project is particularly useful for developers and researchers working on pr
 Before running the RoboLog project, you need the following:
 
 - Niryo One Robot and its software (The link for the software file is down below)
+-
+- ![Screenshot 2024-10-15 120550](https://github.com/user-attachments/assets/621e1500-6341-4690-a8dc-be18f8e5b022)
+
 
 - Arduino Nano 33 BLE board: Used for reading sensor inputs like the in-build IMU, flex sensor and potentiometer.
 
