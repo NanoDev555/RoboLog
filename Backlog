@@ -1,6 +1,7 @@
-Project Backlog: Gesture-Controlled Niryo One Robot
+Project Backlog: Niryo One Robot
 Overview
-This project aims to develop a gesture-controlled interface for the Niryo One robot, enabling users to interact with their environment through intuitive hand movements. The project will utilize sensors to detect gestures and translate them into robot commands, allowing for seamless communication between the user and the robot.
+This project aims to develop a gesture-controlled interface for the Niryo One robot, enabling users to interact with their environment through intuitive hand movements. 
+The project will utilize sensors to detect gestures and translate them into robot commands, allowing for seamless communication between the user and the robot.
 
 User Stories
 User Story 1: Gesture Control
@@ -35,6 +36,7 @@ Text-to-Speech Integration: Integrate a text-to-speech function into both the LC
 API Research: Research and select an effective text-to-speech API or module that works with the chosen platforms.
 Implementation of Speech Functionality: Implement the speech function, ensuring clarity in pronunciation.
 Speech Output Testing: Test the speech output under various conditions to ensure it is clear and accurate.
+
 User Story 5: Calibration for User Specificity
 As a user, I want to calibrate the control system to my specific hand size and movement range so that the gesture detection is accurate for me.
 
@@ -43,6 +45,7 @@ Calibration System Development: Create a system that adjusts sensor sensitivity 
 User-Friendly Interface: Design an interface for the calibration process, accessible through the LCD or mobile app.
 User Testing: Test the calibration feature with various users to gather feedback and ensure it meets diverse needs.
 Process Improvement: Refine the calibration process based on user experiences and feedback.
+
 User Story 6: Bluetooth Stability
 As a user, I need the Bluetooth connection between the control system and the mobile app to be stable so that my communication is not interrupted.
 
@@ -52,6 +55,7 @@ Communication Optimization: Optimize the communication protocols to ensure stabl
 Stability Testing: Test the Bluetooth connection under different scenarios to confirm reliability.
 Improvements and Fixes: Implement necessary fixes to enhance connection stability.
 Conclusion
-This backlog serves as a comprehensive guide for developing a gesture-controlled system for the Niryo One robot. Each user story is focused on addressing specific needs, ensuring that the project is user-centered and practical. Tasks are assigned to ensure a collaborative approach, allowing team members to contribute their skills effectively.
+This backlog serves as a comprehensive guide for developing a gesture-controlled system for the Niryo One robot. Each user story is focused on addressing specific needs, ensuring that the project is user-centered and practical. 
+Tasks are assigned to ensure a collaborative approach, allowing team members to contribute their skills effectively.
 
 Feel free to adjust any sections or details based on your project's specific requirements!
