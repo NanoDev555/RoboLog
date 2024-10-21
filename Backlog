@@ -1,42 +1,57 @@
-Backlog projektkurs
+Project Backlog: Gesture-Controlled Niryo One Robot
+Overview
+This project aims to develop a gesture-controlled interface for the Niryo One robot, enabling users to interact with their environment through intuitive hand movements. The project will utilize sensors to detect gestures and translate them into robot commands, allowing for seamless communication between the user and the robot.
 
-Project Backlog: Gesture-to-Speech Glove
-User Story 1: As a mute individual, I want to wear a glove that can detect my hand gestures so that I can communicate with others using sign language.
-Tasks:
--	Select and source the most suitable flex sensors for accurately detecting finger movements.
--	Design the glove, ensuring that the sensors are correctly positioned on the fingers to capture gestures effectively.
--	Create a prototype of the glove, integrating the sensors and ensuring comfort and usability.
--	Test the prototype for functionality and comfort to ensure it accurately detects hand gestures.
-User Story 2: As a user of the glove, I want the glove to interpret my hand gestures into letters and symbols in real-time so that I can communicate efficiently.
-Tasks:
--	Write the Arduino code to read the data from the flex sensors on the glove.
--	Implement a gesture recognition system in the Arduino that translates finger positions into corresponding letters or symbols.
--	Test the gesture recognition with various hand movements to ensure accuracy and responsiveness.
--	Optimize the Arduino code to process gestures in real-time without delays.
-User Story 3: As a user, I want to see the interpreted gestures displayed as text on an LCD screen or in a mobile app so that I can confirm what I’m communicating.
-Tasks:
--	Develop the functionality to display the recognized gestures as text on an LCD screen attached to the glove.
--	Alternatively, develop the user interface (UI) and user experience (UX) for a mobile application that displays the text.
--	Ensure that both the LCD display and the mobile app can accurately and quickly show the recognized text.
--	Test the display and app with the glove to ensure the output is correct and easy to read.
-User Story 4: As a user, I want the option for the system to speak the recognized gestures aloud so that others can easily understand what I’m communicating.
-Tasks:
--	Integrate a text-to-speech function in both the LCD system (if feasible) and the mobile app.
--	Research and select a suitable text-to-speech API or module that can work with the chosen platform.
--	Implement the speaking function, ensuring that the pronunciation is clear and understandable.
--	Test the speech output under different conditions to ensure clarity and accuracy.
-User Story 5: As a user, I want to calibrate the glove to my specific hand size and movement range so that the gesture detection is accurate for me.
-Tasks:
--	Develop a calibration system that adjusts sensor sensitivity based on the user’s hand size and movement.
--	Create a user-friendly interface for calibration, either on the LCD display or within the mobile app.
--	Test the calibration feature with different users to ensure it meets a variety of needs.
--	Adjust and improve the calibration process based on user feedback.
-User Story 6: As a user, I need the Bluetooth connection between the glove and the mobile app to be stable, or ensure a reliable connection to the LCD display, so that my communication is not interrupted.
-Tasks:
--	Investigate and troubleshoot any potential issues with the Bluetooth connection between the glove and the app, or between the glove and the LCD display (if applicable).
--	Optimize the communication to ensure a stable and reliable connection.
--	Test the connection under various conditions to ensure it remains stable during use.
--	Implement fixes or enhancements to maintain connection stability.
+User Stories
+User Story 1: Gesture Control
+As a user, I want to control the Niryo One robot using gestures so that I can interact with my environment without physical controls.
 
+Tasks:
+Select Sensors: Research and select appropriate IMU and flex sensors that accurately detect hand movements.
+Design Control Mechanism: Create a design for a glove or control device that securely holds the sensors and ensures comfort.
+Prototype Development: Build a prototype of the control system, integrating the sensors with the Niryo One robot.
+User Testing: Conduct user testing to evaluate the accuracy of gesture detection and the overall comfort of the control mechanism.
+User Story 2: Real-Time Gesture Interpretation
+As a user, I want the robot to interpret my hand gestures in real-time so that I can execute commands efficiently.
 
+Tasks:
+Arduino Code Development: Write the Arduino code necessary for reading data from the sensors.
+Gesture Recognition System: Implement a system that translates specific hand gestures into commands for the robot.
+Testing for Accuracy: Test the gesture recognition system with various hand movements to ensure it functions as intended.
+Performance Optimization: Optimize the code for real-time processing, ensuring quick and responsive interactions.
+User Story 3: Command Display
+As a user, I want to see the executed commands displayed on a screen so that I can confirm my instructions to the robot.
 
+Tasks:
+LCD Screen Integration: Develop the necessary functionality to display commands on an LCD screen connected to the robot.
+Mobile App Development: Create a user interface for a mobile application that mirrors the robot's status and commands.
+Quick Response: Ensure both the LCD display and mobile app provide accurate and timely feedback on robot actions.
+Output Testing: Test both output methods with the robot to verify they display the correct information clearly.
+User Story 4: Voice Feedback
+As a user, I want the option for the system to verbally announce the robot’s actions so that others can easily understand what I am communicating.
+
+Tasks:
+Text-to-Speech Integration: Integrate a text-to-speech function into both the LCD display system (if feasible) and the mobile app.
+API Research: Research and select an effective text-to-speech API or module that works with the chosen platforms.
+Implementation of Speech Functionality: Implement the speech function, ensuring clarity in pronunciation.
+Speech Output Testing: Test the speech output under various conditions to ensure it is clear and accurate.
+User Story 5: Calibration for User Specificity
+As a user, I want to calibrate the control system to my specific hand size and movement range so that the gesture detection is accurate for me.
+
+Tasks:
+Calibration System Development: Create a system that adjusts sensor sensitivity based on individual user parameters.
+User-Friendly Interface: Design an interface for the calibration process, accessible through the LCD or mobile app.
+User Testing: Test the calibration feature with various users to gather feedback and ensure it meets diverse needs.
+Process Improvement: Refine the calibration process based on user experiences and feedback.
+User Story 6: Bluetooth Stability
+As a user, I need the Bluetooth connection between the control system and the mobile app to be stable so that my communication is not interrupted.
+
+Tasks:
+Connection Troubleshooting: Investigate and identify any issues with the Bluetooth connection.
+Communication Optimization: Optimize the communication protocols to ensure stable connectivity.
+Stability Testing: Test the Bluetooth connection under different scenarios to confirm reliability.
+Improvements and Fixes: Implement necessary fixes to enhance connection stability.
+Conclusion
+This backlog serves as a comprehensive guide for developing a gesture-controlled system for the Niryo One robot. Each user story is focused on addressing specific needs, ensuring that the project is user-centered and practical. Tasks are assigned to ensure a collaborative approach, allowing team members to contribute their skills effectively.
+
+Feel free to adjust any sections or details based on your project's specific requirements!
