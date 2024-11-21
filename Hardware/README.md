@@ -12,7 +12,6 @@ This document provides detailed information about the hardware components used i
    - [Arduino Nano 33 BLE](#arduino-nano-33-ble)
    - [Potentiometer](#potentiometer)
    - [Sensor](#sensor)
-     - [Flex Sensor](#flex-sensor)
    - [Connections and Wiring](#connections-and-wiring)
    - [Power Supply](#power-supply)
 3. [Maintenance](#maintenance)
@@ -63,7 +62,7 @@ The **Arduino Nano 33 BLE** is a compact microcontroller board featuring Bluetoo
 
 #### Role in the Project
 
-The Arduino Nano 33 BLE collects data from its built-in IMU and connected external sensors (potentiometer and flex sensor), sending this data to the control software running on a computer, which then commands the Niryo One robot.
+The Arduino Nano 33 BLE collects data from its built-in IMU and connected external sensors (potentiometer), sending this data to the control software running on a computer, which then commands the Niryo One robot.
 
 
 #### Potentiometer
@@ -79,15 +78,13 @@ A potentiometer is a three-terminal resistor with a sliding contact that forms a
 
 ### Sensor
 
-#### Flex Sensor
 
 ##### Description
 
-A flex sensor changes its resistance based on the amount it is bent.
 
 ##### How It's Used
 
-- **Gripper Control**: Bending the flex sensor controls the opening and closing of the robot's gripper.
+- **Gripper Control**: Closing of the robot's gripper.
 - **Data Output**: Resistance values correspond to the degree of bend, which are mapped to gripper positions.
 
 ### Connections and Wiring
@@ -105,9 +102,6 @@ A flex sensor changes its resistance based on the amount it is bent.
     - **VCC**: Connect to 3.3V
     - **GND**: Connect to Ground
     - **Signal**: Connect to an analog input pin (e.g., A0)
-  - **Flex Sensor**:
-    - **One End**: Connect to 3.3V through a pull-up resistor (e.g., 10kΩ)
-    - **Other End**: Connect to GND
 
 
 ## Power Supply
@@ -175,7 +169,6 @@ A flex sensor changes its resistance based on the amount it is bent.
 
 - **Sensor Datasheets**
 
-  - **Flex Sensor**: [Manufacturer Info](https://www.sparkfun.com/datasheets/Sensors/Flex/flex22.pdf)
-  - **Potentiometer**: Provided by KTH.
+   - **Potentiometer**: Provided by KTH.
 
 
