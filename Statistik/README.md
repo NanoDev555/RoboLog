@@ -1,12 +1,12 @@
-# Statistik över Niryo One Robotförsök
+# Statistics of Niryo One Robot Trials
 
-Detta projekt samlar data från experiment där fem deltagare (Person 1, Person 2, Person 3, Person 4 och Person 5) använde robotarmen Niryo One för att utföra uppgifter. Tabellen nedan visar resultaten från tio försök per deltagare, samt deras medelvärde. Niryo One är en avancerad robotarm som används för utbildningssyfte, forskning och utveckling av automatiserade processer.
+This project compiles data from experiments where five participants (Person 1, Person 2, Person 3, Person 4, and Person 5) used the Niryo One robotic arm to perform tasks. The table below shows the results from ten trials per participant, along with their average scores. Niryo One is an advanced robotic arm commonly used for educational purposes, research, and the development of automated processes.
 
 ---
 
-## Resultat från försöken
+## Results from the Trials
 
-| Försök     | Person 1 | Person 2 | Person 3 | Person 4 | Person 5 |
+| Trial      | Person 1 | Person 2 | Person 3 | Person 4 | Person 5 |
 |------------|----------|----------|----------|----------|----------|
 | **1**      | 107      | 98       | 138      | 115      | 143      |
 | **2**      | 81       | 112      | 112      | 94       | 123      |
@@ -18,31 +18,31 @@ Detta projekt samlar data från experiment där fem deltagare (Person 1, Person 
 | **8**      | 28       | 45       | 68       | 63       | 47       |
 | **9**      | 35       | 32       | 25       | 41       | 34       |
 | **10**     | 25       | 23       | 27       | 35       | 37       |
-| **Medelvärde** | **100.3** | **87.3** | **77**  | **62.3** | **64.8** |
+| **Average**| **100.3**| **87.3** | **77**   | **62.3** | **64.8** |
 
 ---
 
-## Beskrivning av försöken
+## Description of the Trials
 
-Varje deltagare genomförde tio separata försök där deras poäng registrerades baserat på hur framgångsrikt och effektivt de hanterade robotarmen Niryo One. Robotarmen används ofta för att simulera verkliga applikationer inom industri och utbildning. Försöken mätte både precision och tidseffektivitet, vilket resulterade i poäng för varje individ.
+Each participant completed ten separate trials, with their scores recorded based on how successfully and efficiently they operated the Niryo One robotic arm. The robotic arm is often used to simulate real-world applications in industry and education. The trials measured both precision and time efficiency, resulting in scores for each individual.
 
-### Analys per deltagare
-- **Person 1** presterade bäst med ett högsta medelvärde på **100.3**. Resultaten var konsekvent höga i de första försöken.
-- **Person 2** följde som tvåa med ett medelvärde på **87.3**, med särskilt starka resultat i de första tre försöken.
-- **Person 3** hade ett medelvärde på **77**, vilket visar en stadig prestation med höga poäng i början men en nedgång mot slutet.
-- **Person 4** visade ett lägre medelvärde på **62.3**, med toppresultat i försök 7.
-- **Person 5** låg sist med ett medelvärde på **64.8**, vilket kan bero på variationer i poängen under försöken.
-
----
-
-## Slutsats
-
-Resultaten visar en generell trend där deltagarnas poäng minskar över tid. Detta kan indikera trötthet, ökande svårighet i uppgifterna, eller utmaningar med robotens precision. Niryo One är en användbar plattform för att förstå och förbättra färdigheter inom robotik och automatisering.
+### Participant Analysis
+- **Person 1** performed the best with the highest average score of **100.3**. Their results were consistently high in the early trials.
+- **Person 2** came in second with an average score of **87.3**, showing strong results in the first three trials.
+- **Person 3** had an average score of **77**, demonstrating steady performance with high scores at the beginning, followed by a decline towards the end.
+- **Person 4** showed a lower average score of **62.3**, with peak performance in trial 7.
+- **Person 5** scored the lowest with an average of **64.8**, possibly due to variability in their scores across trials.
 
 ---
 
-## Framtida arbete
+## Conclusion
 
-- Utföra fler försök med fler deltagare för att få en större databas.
-- Analysera varför poängen sjunker och identifiera potentiella förbättringsområden för användarens prestanda.
-- Testa andra uppgifter med Niryo One för att mäta olika aspekter av användarinteraktion.
+The results reveal a general trend of decreasing scores over time, which may indicate fatigue, increasing task difficulty, or challenges in maintaining precision with the robotic arm. Niryo One serves as a valuable platform for understanding and improving skills in robotics and automation.
+
+---
+
+## Future Work
+
+- Conduct more trials with additional participants to create a larger dataset.
+- Analyze the reasons behind the decline in scores and identify potential areas for improving user performance.
+- Test other tasks with Niryo One to measure different aspects of user interaction.
