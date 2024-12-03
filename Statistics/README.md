@@ -35,9 +35,38 @@ Each participant completed ten separate trials, with their scores recorded based
 
 ---
 
+## Additional Simulated Data
+
+Below is the raw data collected during a specific simulation sequence. This data captures the movements of the Niryo One robotic arm as it completes a task, including joint positions and gripper actions.
+
+### Simulated Sequence
+
+1. Robot moves to final position: **Joint 1 = -0.5, Joint 2 = 0.4, Joint 3 = -0.3**
+2. Robot moves to final position: **Joint 1 = -0.6, Joint 2 = 0.2, Joint 3 = -0.4**
+3. Robot moves to final position: **Joint 1 = -0.4, Joint 2 = 0.3, Joint 3 = -0.6**
+4. Gripper opens
+5. Robot moves to final position: **Joint 1 = 0.0, Joint 2 = -0.3, Joint 3 = -0.2**
+6. Robot moves to final position: **Joint 1 = 0.3, Joint 2 = -0.5, Joint 3 = -0.1**
+7. Gripper closes
+8. Robot moves to final position: **Joint 1 = 0.5, Joint 2 = -0.4, Joint 3 = 0.2**
+9. Robot moves to final position: **Joint 1 = 0.6, Joint 2 = -0.2, Joint 3 = 0.3**
+10. Robot moves to final position: **Joint 1 = 0.4, Joint 2 = -0.1, Joint 3 = 0.6**
+11. Gripper opens
+12. Robot moves to final position: **Joint 1 = 0.2, Joint 2 = 0.0, Joint 3 = -0.2**
+13. Robot moves to final position: **Joint 1 = -0.1, Joint 2 = 0.1, Joint 3 = -0.3**
+14. Robot moves to final position: **Joint 1 = -0.3, Joint 2 = 0.4, Joint 3 = -0.6**
+15. Gripper closes
+16. Robot moves to final position: **Joint 1 = 0.0, Joint 2 = 0.2, Joint 3 = -0.1**
+
+### Description of Simulated Sequence
+
+This sequence demonstrates a controlled task where the Niryo One robot transitions between various joint positions while interacting with its environment using a gripper. The movements reflect precision and adaptive control, essential for applications requiring repetitive tasks.
+
+---
+
 ## Conclusion
 
-The results reveal a general trend of decreasing scores over time, which may indicate fatigue, increasing task difficulty, or challenges in maintaining precision with the robotic arm. Niryo One serves as a valuable platform for understanding and improving skills in robotics and automation.
+The results and simulation sequences provide valuable insights into the performance of the Niryo One robotic arm. By analyzing both user trials and simulated data, this project aims to refine robotic operations and improve user experience. Further studies could expand on these findings to enhance robotic efficiency and usability.
 
 ---
 
