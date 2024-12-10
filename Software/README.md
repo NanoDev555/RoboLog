@@ -153,3 +153,8 @@ This documentation outlines the key aspects of the RoboLog software, focusing on
 ---
 
 *For further details, please refer to the code comments and documentation within the source files.*
+
+
+
+This version includes your code snippets in the proper sections of the README. Save it as `README.md` in your GitHub repository. Let me know if further adjustments are needed!
+
