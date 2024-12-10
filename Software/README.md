@@ -22,27 +22,39 @@ The RoboLog project aims to control a Niryo One robotic arm using sensor inputs 
 - **Arduino Code**: Reads sensor data and sends it to the computer.
 - **Python Code**: Processes sensor data and controls the robotic arm.
 
-The Arduino and Python codes communicate using serial communication. The Arduino continuously sends sensor values to the Python program, which processes the data to control the robotic arm.
+The Arduino and Python programs communicate via serial communication. The Arduino continuously sends sensor values to the Python script, which processes the data to control the robot arm. Below are examples of how data is transmitted:
 
+### Arduino Example:
+```cpp
+Serial.print(medelY);
+Serial.print(',');
+Serial.print(medelX);
+Serial.print(',');
+Serial.print(potVärde);
+Serial.print(',');
+Serial.println(gripTillstånd);
 ---
 
 ## Arduino Code
 
 ### Purpose
 
-The Arduino code (`robolog.ino`) runs on the Arduino Nano 33 BLE. Its main functions are:
+The Arduino code (`robolog.ino`) runs on the Arduino Nano 33 BLE. Its primary functions are:
 
-- **Sensor Data Acquisition**:
-  - **IMU (Inertial Measurement Unit)**: Detects movements along the X and Y axes.
-  - **Potentiometer**: Controls Joint 3 of the robotic arm.
-  - **Gripper Button**: Toggles the gripper state (open/close).
+1. **Sensor Data Acquisition**:
+   - Reads data from an IMU for Joint 1 and Joint 2.
+   - Uses a potentiometer for Joint 3.
+   - Detects gripper button presses.
 
-- **Data Processing**:
-  - Averages sensor readings to reduce noise.
-  - Detects significant changes to decide when to send data.
+2. **Data Processing**:
+   - Averages sensor readings to minimize noise.
+   - Detects significant changes to trigger data transmission.
 
-- **Data Transmission**:
-  - Sends processed sensor data and gripper state to the computer via serial communication.
+3. **Data Transmission**:
+   - Sends sensor values and gripper state to the computer as a comma-separated string:
+     ```
+     avgY,avgX,potVal,gripState
+     ```
 
 ### Key Functionality
 
@@ -51,20 +63,8 @@ The Arduino code (`robolog.ino`) runs on the Arduino Nano 33 BLE. Its main funct
    - Initializes sensors and variables.
 
 2. **Main Loop**:
-   - Reads and averages sensor data.
-   - Checks for significant changes in readings.
-   - Handles gripper button input with debounce logic.
-   - Sends data when changes are detected.
-
-3. **Data Format**:
-   - Sends data as a comma-separated string:
-     ```
-     avgY,avgX,potVal,gripState
-     ```
-     - `avgY`: Averaged Y-axis acceleration (Joint 1).
-     - `avgX`: Averaged X-axis acceleration (Joint 2).
-     - `potVal`: Potentiometer value (Joint 3).
-     - `gripState`: Gripper state (`0` for closed, `1` for open).
+   - Reads sensor data and averages values.
+   - Detects changes and sends the formatted string via serial communication.
 
 ---
 
@@ -72,17 +72,17 @@ The Arduino code (`robolog.ino`) runs on the Arduino Nano 33 BLE. Its main funct
 
 ### Purpose
 
-The Python code (`robolog_controller.py`) runs on a computer connected to the Arduino and the Niryo One robotic arm. Its main functions are:
+The Python code (`robolog_controller.py`) processes sensor data and controls the Niryo One robotic arm. Its main functions include:
 
-- **Data Reception**:
-  - Reads sensor data from the Arduino via serial communication.
+1. **Data Reception**:
+   - Reads serial data from the Arduino.
 
-- **Data Processing**:
-  - Parses incoming data.
-  - Maps sensor inputs to robot joint movements and gripper actions.
+2. **Data Processing**:
+   - Parses the incoming data and applies scaling, clamping, and mapping to calculate joint positions.
 
-- **Robot Control**:
-  - Sends movement commands to the robotic arm using the Niryo One Python API.
+3. **Robot Control**:
+   - Sends joint movement commands to the Niryo One robot via its Python API.
+   - Controls the gripper based on button input.
 
 ### Key Functionality
 
@@ -91,10 +91,8 @@ The Python code (`robolog_controller.py`) runs on a computer connected to the Ar
    - Sets up serial communication with the Arduino.
 
 2. **Main Loop**:
-   - Reads and parses sensor data.
-   - Applies thresholds, scaling, and clamping to sensor values.
-   - Controls the gripper based on button input.
-   - Moves the robot joints to the calculated positions.
+   - Continuously reads data from the serial port.
+   - Processes and maps the values to robot movements and gripper control.
 
 3. **Supporting Functions**:
    - **`map_value_to_radians()`**: Converts sensor values to joint angles.
@@ -106,55 +104,52 @@ The Python code (`robolog_controller.py`) runs on a computer connected to the Ar
 ## How It Works
 
 1. **Sensor Input**:
-   - User moves the device with the Arduino and sensors.
-   - IMU detects movements (Joints 1 and 2).
-   - Potentiometer controls Joint 3.
-   - Button toggles the gripper.
+   - Users interact with the Arduino device.
+   - IMU values control Joints 1 and 2.
+   - Potentiometer adjusts Joint 3.
+   - Button toggles the gripper state.
 
-2. **Data Processing**:
-   - **Arduino**: Averages readings and sends data when changes are detected.
-   - **Python**: Processes data and calculates joint positions.
+2. **Data Transmission**:
+   - **Arduino**: Detects changes and sends them via serial communication.
+   - **Python**: Processes received data and sends robot control commands.
 
-3. **Robot Control**:
-   - Python script sends commands to the robot via the Niryo One API.
-   - Robot moves joints and controls the gripper accordingly.
+3. **Robot Execution**:
+   - The Niryo One robot executes joint movements and gripper actions.
 
 ---
 
 ## Usage
 
-1. **Setup**:
-   - **Arduino**:
-     - Upload `robolog.ino` to the Arduino Nano 33 BLE.
-     - Connect sensors and gripper button.
-     - Connect Arduino to the computer via USB.
-   - **Niryo One Robot**:
-     - Ensure the robot is powered on and connected.
-   - **Python Environment**:
-     - Install required Python packages: `niryo_one_python_api`, `pyserial`, `rospy`.
+### Requirements
+- **Arduino**: Nano 33 BLE with connected IMU, potentiometer, and button.
+- **Python Environment**:
+  - Required libraries: `niryo_one_python_api`, `pyserial`, `rospy`.
+- **Niryo One Robot**: Ensure the robot is connected and operational.
 
-2. **Running the Software**:
-   - Run the Python script:
+### Steps
+
+1. **Setup**:
+   - Upload the `robolog.ino` file to the Arduino.
+   - Connect the Arduino to the computer.
+   - Power on the Niryo One robotic arm.
+
+2. **Run the Python Script**:
+   - Execute the Python controller:
      ```bash
      python robolog_controller.py
      ```
 
-3. **Controlling the Robot**:
-   - Move the Arduino device to control Joints 1 and 2.
+3. **Control the Robot**:
+   - Move the Arduino device for Joints 1 and 2.
    - Adjust the potentiometer for Joint 3.
-   - Press the button to open or close the gripper.
+   - Press the button to toggle the gripper.
 
 ---
 
 ## Conclusion
 
-This documentation outlines the key aspects of the RoboLog software, focusing on the essential components to help you understand how the system operates. By understanding the Arduino and Python code functions, you can effectively work with and enhance the RoboLog project.
+The RoboLog project integrates Arduino and Python to achieve efficient robotic arm control using sensor inputs. By processing sensor data in real-time, the system ensures precise joint movements and gripper actions. This documentation provides a comprehensive overview to help developers understand and enhance the RoboLog system.
 
 ---
 
-*For further details, please refer to the code comments and documentation within the source files.*
-
-
-
-This version includes your code snippets in the proper sections of the README. Save it as `README.md` in your GitHub repository. Let me know if further adjustments are needed!
-
+*For further details, refer to the comments in the source code files.*
