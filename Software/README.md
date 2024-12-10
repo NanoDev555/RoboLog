@@ -33,8 +33,7 @@ Serial.print(',');
 Serial.print(potVärde);
 Serial.print(',');
 Serial.println(gripTillstånd);
----
-
+```
 ## Arduino Code
 
 ### Purpose
