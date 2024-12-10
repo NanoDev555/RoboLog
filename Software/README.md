@@ -22,6 +22,8 @@ The RoboLog project aims to control a Niryo One robotic arm using sensor inputs 
 - **Arduino Code**: Reads sensor data and sends it to the computer.
 - **Python Code**: Processes sensor data and controls the robotic arm.
 
+The Arduino and Python codes communicate using serial communication. The Arduino continuously sends sensor values to the Python program, which processes the data to control the robotic arm.
+
 ---
 
 ## Arduino Code
@@ -111,7 +113,7 @@ The Python code (`robolog_controller.py`) runs on a computer connected to the Ar
 
 2. **Data Processing**:
    - **Arduino**: Averages readings and sends data when changes are detected.
-   - **Computer**: Python script processes data and calculates joint positions.
+   - **Python**: Processes data and calculates joint positions.
 
 3. **Robot Control**:
    - Python script sends commands to the robot via the Niryo One API.
@@ -146,7 +148,7 @@ The Python code (`robolog_controller.py`) runs on a computer connected to the Ar
 
 ## Conclusion
 
-This simplified documentation outlines the key aspects of the RoboLog software, focusing on the essential components to help you understand how the system operates. By understanding the Arduino and Python code functions, you can effectively work with and enhance the RoboLog project.
+This documentation outlines the key aspects of the RoboLog software, focusing on the essential components to help you understand how the system operates. By understanding the Arduino and Python code functions, you can effectively work with and enhance the RoboLog project.
 
 ---
 
